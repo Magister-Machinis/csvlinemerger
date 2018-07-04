@@ -33,9 +33,9 @@ foreach($line in $target)
 	}	
 }
 $output = @()
-foreach($item in $intermediate)
+foreach($item in $intermediate.keys)
 {
-	$output += $item
+	$output += $intermediate.$item
 }
 
 $output | export-csv $outputfile
